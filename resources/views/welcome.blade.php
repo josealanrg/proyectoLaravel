@@ -9,7 +9,6 @@
             html, body {
                 height: 100%;
             }
-
             body {
                 margin: 0;
                 padding: 0;
@@ -46,6 +45,7 @@
             <div class="content">
                 <div class="title">Laravel 5</div>
                 <div class="quote">{{ Inspiring::quote() }}</div>
+                <h3>flores soto kevin</h3>
             </div>
         </div>
     </body>
