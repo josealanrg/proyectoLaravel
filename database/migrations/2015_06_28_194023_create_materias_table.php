@@ -14,7 +14,7 @@ class CreateMateriasTable extends Migration
     {
         Schema::create('materias', function($table)
         {
-            $table->increments('id_mat');
+            $table->increments('id_materia');
             
             $table->string('Nombre');
       

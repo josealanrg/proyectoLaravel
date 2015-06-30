@@ -1,0 +1,75 @@
+body
+{
+	background: #EBF8FF;
+	border: 1px solid #000088;
+	border-radius: 5px;
+	margin: 0 auto;
+	max-width: 1300px;
+}
+
+footer
+{
+	font-weight: bold;
+	text-align: center;
+}
+
+header nav
+{
+	
+}
+
+header nav ul
+{
+	text-align: center;
+
+}
+
+header nav ul li
+{
+	margin-right: 900px;
+}
+
+
+header .page-header
+{
+	margin-left: 15px;
+
+
+}
+
+figure img
+{
+	width: 120px;
+	position: absolute;
+	margin-left: 1100px;
+	margin-top: -150px;
+}
+#articulo
+{	
+	width: 30%;
+}
+
+#articulo2
+{
+	
+	width: 65%;
+}
+
+#primeraseccion article
+{
+	
+	display:inline-block;
+	vertical-align: top;
+	
+}
+
+
+
+
+
+
+
+
+
+
+

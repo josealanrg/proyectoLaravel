@@ -10,19 +10,16 @@ class CreateAlumnTable extends Migration
      *
      * @return void
      */
-    public function up()
+    
+       public function up()
     {
-        Schema::create('alumnos', function($table)
-        {
-            $table->increments('id_alumn');
-            
+        Schema::create('alumnos', function (Blueprint $table) {
+            $table->increments('id_alumno');
             $table->string('Nombre');
-            $table->string('N_control');
-      
-            
             $table->timestamps();
         });
     }
+    
 
     /**
      * Reverse the migrations.

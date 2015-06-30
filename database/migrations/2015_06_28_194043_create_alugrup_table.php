@@ -16,8 +16,10 @@ class CreateAlugrupTable extends Migration
         {
             $table->increments('id_alugrup');
             
-            $table->string('id_alumn');
-            $table->string('id_grupo');
+            $table->integer('id_alumno')->unsigned();
+            $table->foreign('id_alumno')->references('id_alumno')->on('alumnos');
+            $table->integer('id_grupo')->unsigned();
+            $table->foreign('id_grupo')->references('id_grupo')->on('grupos');
       
             
             $table->timestamps();
