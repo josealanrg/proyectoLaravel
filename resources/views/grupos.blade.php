@@ -5,8 +5,8 @@
 
 @section ('grupos')
 
-    $GET('id_materia')
-
+    
+ 
     <article id="articulo2">
 
   <div class="panel panel-primary" id="panelgrupos">
@@ -18,14 +18,12 @@
         @foreach ($grupos as $grupo)
 
             <center> Aula : <button class="btn btn-primary">
-                  {{ $grupo->aula}}             
+                       
                     </button>  <br>  <br>             
 
                    </center>
 
-
-            @endforeach
-      
+      @endforeach
       </div>
     </div>
 

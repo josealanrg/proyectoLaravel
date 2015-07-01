@@ -12,8 +12,8 @@
           <h1>Proyecto Laravel <br> <small>Instituto Tecnológico de Culiacán
           </small></h1>
         </div>
-        <figure>
-        <img src="imagen.png">
+       <figure>
+        <img src={{ asset('imagen.png') }}>
     </figure>
     </header>
     <section id="primeraseccion">
