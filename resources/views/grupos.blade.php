@@ -5,6 +5,7 @@
 
 @section ('grupos')
 
+    $GET('id_materia')
 
     <article id="articulo2">
 

@@ -3,13 +3,16 @@
 
 @section ('materias')
 
+
 	
         <nav>
             @foreach ($materias as $materia)
 
-            <center><button class="btn btn-primary">
+            <center><button class="btn btn-default">
+
+            	<a href="/proyectoLaravel/public/grupos?id={{$materia->id_materia}}">{{  $materia->Nombre}}</a>
          
-              {{ $materia->Nombre}}
+              
 
 
                     </button> </center> <br> <br>
