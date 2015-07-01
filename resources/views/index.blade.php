@@ -12,7 +12,7 @@
               {{ $materia->Nombre}}
 
 
-                    </button> </center> <br>
+                    </button> </center> <br> <br>
 
             @endforeach
         </nav>
