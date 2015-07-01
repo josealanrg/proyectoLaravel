@@ -12,3 +12,10 @@
 */
 
 Route::get('/', 'HomeController@index');
+
+
+
+
+Route::get('grupos', 'HomeController@grupos');
+
+
