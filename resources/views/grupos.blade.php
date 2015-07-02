@@ -18,12 +18,21 @@
 
               @foreach ($grupos as $grupo)
 
-            <center><button  class="btn btn-primary" style='width:50px; height:35px'>
+            <center> <b>Aula :</b><button  class="btn btn-primary" style='width:63px; height:35px'>
 
-              {{  $grupo->aula}}
+              {{ $grupo->aula}}
          
-                </button></center>
+                </button> <BR>
+
+                <b>Maestro :</b> {{ $grupo->Nombre}}
+<br>
+
+---------------------------------------------------------------------------------------------------------</center>
               @endforeach
+
+
+             
+ 
  
        
       </div>

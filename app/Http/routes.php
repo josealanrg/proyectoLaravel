@@ -16,6 +16,6 @@ Route::get('/', 'HomeController@index');
 
 
 
-Route::get('{id}',['as' => 'grupo' ,'uses' => 'HomeController@grupos']);
-
+Route::get('{id}',['as' => 'grupo' ,'uses' => 'HomeController@gruposMaterias']);
+Route::get('/grupos/{id}','HomeController@gruposMaterias');
 
