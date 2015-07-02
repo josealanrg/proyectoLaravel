@@ -1,16 +1,31 @@
 
-@extends('base')
 
-@section ('materias')
-
-
-	
-        <nav>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto Laravel</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="page-header">
+          <h1>Proyecto Laravel <br> <small>Instituto Tecnológico de Culiacán
+          </small></h1>
+        </div>
+       <figure>
+        <img src={{ asset('imagen.png') }}>
+    </figure>
+    </header>
+    <section id="primeraseccion">
+        <article id="articulo">
+      <nav>
             @foreach ($materias as $materia)
 
             <a href="{{ route('grupo',[$materia->id_materia,$materia->Nombre]) }}"><center><button  class="btn btn-default" style='width:250px; height:35px'>
 
-            	{{  $materia->Nombre}}
+              {{  $materia->Nombre}}
          
               
 
@@ -20,35 +35,14 @@
             @endforeach
         </nav>
     
+   @yield('grupos')
 
-@stop
+    </section>  
 
-@section ('grupos')
-
-
-    <article id="articulo2">
-
-  <div class="panel panel-primary" id="panelgrupos">
-      <div class="panel-heading">
-        <h3 class="panel-title">Grupos disponibles</h3>
-      </div>
-      <div class="panel-body" >
-
-         @foreach ($grupos as $grupo)
-
-            <center> Aula : <button class="btn btn-primary">
-                       {{ $grupo->aula}}
-                    </button>  <br>  <br>             
-
-                   </center>
-
-      @endforeach
-
- 
-       
-      </div>
-    </div>
-
-    </article>
-
-    @stop
+    <footer>
+        <small>
+            DR &copy; Ingenieria Web Verano 2015.
+        </small>
+    </footer>
+</body>
+</html>

@@ -21,7 +21,7 @@ class HomeController extends Controller {
          public function grupos($id)
     {
    
-		return View::make('index')->with(['materias' => Materia::all() ,
+		return View::make('grupos')->with(['materias' => Materia::all() ,
                                            'grupos' => Grupo::where ('id_materia','=',$id)->get()]);
 
 
