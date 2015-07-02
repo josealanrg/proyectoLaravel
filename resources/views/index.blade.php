@@ -8,7 +8,7 @@
         <nav>
             @foreach ($materias as $materia)
 
-            <a href="/proyectoLaravel/public/grupos?id={{$materia->id_materia}}"><center><button  class="btn btn-default" style='width:250px; height:35px'>
+            <a href="{{ route('grupo',[$materia->id_materia,$materia->Nombre]) }}"><center><button  class="btn btn-default" style='width:250px; height:35px'>
 
             	{{  $materia->Nombre}}
          
@@ -34,21 +34,17 @@
       </div>
       <div class="panel-body" >
 
-      
-      
-     
-      	<br>
-      	<br><br>
-      	<br><br>
-      	<br><br>
-      	<br><br>
-      	<br><br>
-      	<br><br>
-      	<br><br>
-      	<br><br>
-      	<br><br>
-      	<br><br>
-      	
+         @foreach ($grupos as $grupo)
+
+            <center> Aula : <button class="btn btn-primary">
+                       {{ $grupo->aula}}
+                    </button>  <br>  <br>             
+
+                   </center>
+
+      @endforeach
+
+ 
        
       </div>
     </div>

@@ -18,10 +18,11 @@ class HomeController extends Controller {
 	
     }
 
-         public function grupos()
+         public function grupos($id)
     {
-       	 $grupos = Grupo::all();
-		return View::make('grupos')->with('grupos',$grupos);
+   
+		return View::make('index')->with(['materias' => Materia::all() ,
+                                           'grupos' => Grupo::where ('id_materia','=',$id)->get()]);
 
 
     }
