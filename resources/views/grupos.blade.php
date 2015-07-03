@@ -3,18 +3,10 @@
 @extends('index')
 @section('grupos')
 
-  </article>
 
-   <article id="articulo2">
-
-       <div class="panel panel-primary" id="panelgrupos">
-        <div class="panel-heading">
-        <h3 class="panel-title">Grupos disponibles</h3>
-        </div>
-            @yield('grupos')
+            
 
 
-<div class="panel-body" >
 
               @foreach ($grupos as $grupo)
 
@@ -24,10 +16,13 @@
          
                 </button> <BR>
 
-                <b>Maestro :</b> {{ $grupo->Nombre}}
+
+                <b>Maestro :</b> {{ $grupo->Nombre}}<br>
+
+                <b>Hora :</b> {{ $grupo->hora}}
 <br>
 
----------------------------------------------------------------------------------------------------------</center>
+_______________________________________________________________________________</center> <br>
               @endforeach
 
 
@@ -35,9 +30,7 @@
  
  
        
-      </div>
-
-</article>
+   
 
 
 

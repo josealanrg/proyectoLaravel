@@ -19,6 +19,7 @@ class CreateGruposTable extends Migration
             $table->integer('id_maestro')->unsigned();
             $table->foreign('id_maestro')->references('id_maestro')->on('maestros');
             $table->string('aula');
+            $table->string('hora');
             $table->timestamps();
         });
     }
