@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Database\Eloquent\Model;
 use App\Materia;
 use App\Grupo;
+use App\Alumno;
 use View;
 
 class HomeController extends Controller {
@@ -22,6 +23,7 @@ class HomeController extends Controller {
              {
 
         $grupos=Grupo::getGrupos($id);
+        
         $materias=Materia::allmaterias();
 
         return view('grupos',compact ('grupos','materias'));
@@ -30,6 +32,17 @@ class HomeController extends Controller {
           //                                 'grupos' => Grupo::where ('id_materia','=',$id)->get()]);
 
 
+    }
+
+
+    public function generapdf($id)
+    {
+        $grupo = Grupo::getInfoGrupo($id);
+        $alumnos = Alumno::getAlumnos($id);
+        $vista = view('generapdf', compact('grupo','alumnos'));
+        $dompdf = \App::make('dompdf.wrapper');
+        $dompdf->loadHTML($vista);
+        return $dompdf->stream();
     }
 
 

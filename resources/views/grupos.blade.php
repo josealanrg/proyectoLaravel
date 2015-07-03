@@ -10,11 +10,11 @@
 
               @foreach ($grupos as $grupo)
 
-            <center> <b>Aula :</b><button  class="btn btn-primary" style='width:63px; height:35px'>
+            <center> <b>Aula :</b> <a href="{{ route('pdf',[$grupo->id_grupo]) }}"><button  class="btn btn-primary" style='width:70px; height:35px'>
 
               {{ $grupo->aula}}
          
-                </button> <BR>
+                </button> </a><BR>
 
 
                 <b>Maestro :</b> {{ $grupo->Nombre}}<br>

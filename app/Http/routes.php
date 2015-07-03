@@ -18,4 +18,5 @@ Route::get('/', 'HomeController@index');
 
 Route::get('{id}',['as' => 'grupo' ,'uses' => 'HomeController@gruposMaterias']);
 Route::get('/grupos/{id}','HomeController@gruposMaterias');
+Route::get('/pdf/{id}', ['as' => 'pdf','uses' =>  'HomeController@generapdf']);
 
